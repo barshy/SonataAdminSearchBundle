@@ -24,7 +24,7 @@
         "php": "^7.1",
         "friendsofsymfony/elastica-bundle": "^5.0",
         "pagerfanta/pagerfanta": "^2.0",
-        "ruflin/elastica": "^5.0",
+        "ruflin/elastica": "^6.0",
         "sonata-project/admin-bundle": "^3.58.0",
         "symfony/config": "^4.4",
         "symfony/dependency-injection": "^4.4",
