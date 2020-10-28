@@ -30,8 +30,6 @@ class BooleanFilter extends Filter
             return;
         }
         
-        $this->active = true;
-        
         if (\is_array($data['value'])) {
             $values = [];
             foreach ($data['value'] as $v) {
@@ -66,6 +64,8 @@ class BooleanFilter extends Filter
 
             $query->addMust($innerQuery);
         }
+        
+        $this->active = true;
     }
 
     /**
