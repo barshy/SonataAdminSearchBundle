@@ -29,7 +29,9 @@ class BooleanFilter extends Filter
         if (!$data || !\is_array($data) || !\array_key_exists('type', $data) || !\array_key_exists('value', $data)) {
             return;
         }
-
+        
+        $this->active = true;
+        
         if (\is_array($data['value'])) {
             $values = [];
             foreach ($data['value'] as $v) {
