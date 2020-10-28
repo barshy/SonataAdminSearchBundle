@@ -49,6 +49,7 @@ class NumberFilter extends Filter
         }
 
         $query->addMust($innerQuery);
+        $this->active = true;
     }
 
     /**
