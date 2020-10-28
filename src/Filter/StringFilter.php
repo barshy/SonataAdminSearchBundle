@@ -35,7 +35,9 @@ class StringFilter extends Filter
         if (0 === \strlen($data['value'])) {
             return;
         }
-
+        
+        $this->active = true;
+        
         $data['type'] = !isset($data['type']) ? ContainsOperatorType::TYPE_CONTAINS : $data['type'];
 
         [$firstOperator, $secondOperator] = $this->getOperators((int) $data['type']);
