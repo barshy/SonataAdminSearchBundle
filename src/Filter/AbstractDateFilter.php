@@ -149,6 +149,8 @@ abstract class AbstractDateFilter extends Filter
                 $query->addMust($innerQuery);
             }
         }
+        
+        $this->active = true;
     }
 
     /**
