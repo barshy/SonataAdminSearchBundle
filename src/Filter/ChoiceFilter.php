@@ -69,6 +69,8 @@ class ChoiceFilter extends Filter
                 $query->addMustNot($innerQuery);
             }
         }
+        
+        $this->active = true;
     }
 
     /**
