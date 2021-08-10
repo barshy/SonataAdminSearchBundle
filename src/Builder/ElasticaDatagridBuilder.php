@@ -151,8 +151,8 @@ class ElasticaDatagridBuilder implements DatagridBuilderInterface
         $finderId = $this->finderProvider->getFinderIdByAdmin($admin);
 
         // Assume that finder id is composed like this 'fos_elastica.finder.<index name>.<type name>
-        [$indexName, $typeName] = \array_slice(explode('.', $finderId), 2);
-        $typeConfiguration = $this->configManager->getTypeConfiguration($indexName, $typeName);
+        [$indexName] = \array_slice(explode('.', $finderId), 2);
+        $typeConfiguration = $this->configManager->getIndexConfiguration($indexName);
         $mapping = $typeConfiguration->getMapping();
         $mappedFieldNames = array_keys($mapping['properties']);
 
